@@ -1,12 +1,22 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W7T9H29RY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4W7T9H29RY');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>QR Code Generator </title>
 </head>
+
 <body>
     <div class="card">
         <h2>Enter your text or URL</h2>
@@ -15,53 +25,11 @@
             <img src="" id="qrImage">
         </div>
         <div>
-            <button class="button" onclick="generateQR()" >Generate QR Code</button>
+            <button class="button" onclick="generateQR()">Generate QR Code</button>
         </div>
     </div>
 
     <script src="script.js"> </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>QR Code Generater </title>
-</head>
-<body>
-    <div class="card">
-        <h2>Enter your text or URL</h2>
-        <input type="text" placeholder="Text or URL" id="qrText">
-        <div id="imgBox">
-            <img src="" id="qrImage">
-        </div>
-        <div>
-            <button class="button" onclick="generateQR()" >Generate QR Code</button>
-        </div>
-    </div>
 
-    <script>
-
-        let imgBox = document.getElementById('imgBox');
-        let qrImage = document.getElementById('qrImage');
-        let qrText = document.getElementById("qrText")
-
-        function generateQR() {
-            if(qrText.value.length > 0){
-                qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
-            imgBox.classList.add("show-img");
-          }
-          else {
-            qrText.classList.add('error');
-            setTimeout(()=> {
-                qrText.classList.remove('error')
-            },1000)
-          }
-        }
-            
-    </script>
-</body>
->>>>>>> bec9a23d2c75fea79beaf618f8a74ff3f2888ceb
 </html>
